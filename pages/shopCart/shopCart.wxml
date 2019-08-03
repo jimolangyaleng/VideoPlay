@@ -1,0 +1,3 @@
+<view id="shopCartPage">
+    <text>{{shopData}}</text>
+</view>

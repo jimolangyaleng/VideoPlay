@@ -1,0 +1,4 @@
+<!-- item.wxml -->
+<template name="huangxiaoming">
+  <text>{{text}}</text>
+</template>

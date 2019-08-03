@@ -1,0 +1,12 @@
+<!--pages/login/login.wxml-->
+<view id="pwdLogin">
+    <view class="mobile">
+        <input placeholder-style="font-size:24rpx;" bindinput="loginNo" maxlength="11" type="idcard" placeholder="请输入登录手机号" />
+    </view>
+    <view class="pwd">
+        <input placeholder-style="font-size:24rpx;" bindinput="loginPwd" maxlength="6" type="password" placeholder="请输入登录密码" />
+    </view>
+
+    <button type="default"  bindtap="primary" bindtap="login"> 登录 </button>
+</view>
+

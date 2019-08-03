@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<!--<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+   <view class="firstBtn">
+    <button bindtap="changeName"> {{msg}} </button>
+  </view>
+</view>-->
+<view id='homePage'>
+    <!-- <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key='*this'>
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="section">
+      <view class="mdl_area">
+          <ul>
+                <li class="jmz" bindtap="bindViewTap">捡萌钻</li>
+                <li class="qhb" bindtap='bindLoadingTap'>抢红包</li>
+                <li class="dsp" >逛商城</li>
+                <li class="xsh">享生活</li>  
+          </ul>
+          <ul>
+            <li class="mmz">买萌钻</li>
+            <li class="yhy">邀好友</li>
+            <li class="dex">定额险</li>
+            <li class="mcx">买车险</li>
+          </ul>
+        </view>
+    </view>
+    <view class='pprt_title title_component'>
+      <view class="line"></view>
+	    <label>品牌热推</label>
+    </view>
+    <view class='hotGoods'>
+      <view class="pprt_content" wx:for-items="{{hotImgUrls}}" wx:key="*this" wx:for-item = "ming">
+	          <image src="{{ming}}"/>
+	    </view>
+    </view> -->
+    <web-view src="https://mp.weixin.qq.com/"></web-view>
+</view>
+
+<!--<button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button>
+<slider bindchange="intervalChange" show-value min="500" max="2000"/> interval
+<slider bindchange="durationChange" show-value min="1000" max="10000"/> duration-->

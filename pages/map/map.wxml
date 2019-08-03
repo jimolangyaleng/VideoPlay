@@ -1,0 +1,8 @@
+<!--pages/map/map.wxml-->
+<view id='searchMap'>
+    <view class='search'>
+        <input placeholder="请输入附近位置" type="text" bindinput="serLoaction" placeholder-style = "color:#ccc;" />
+        <button type="primary" size="mini" bindtap="primary" bindtap="serach">搜索</button>
+    </view>
+    <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" include-points="{{points}}"  show-location="{{showLocation}}" circles="{{circles}}" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 500px;"></map>
+</view>

@@ -1,0 +1,5 @@
+/**app.wxss**/
+image{
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}

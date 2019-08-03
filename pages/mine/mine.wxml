@@ -1,0 +1,73 @@
+<view id="minePage">
+   <view class='top'>
+        <view class='md' bindtap='goLogin'>
+            <view class='loadingImg' style="background-image:{{bgImage}}"></view>
+            <view class='rightInfo'>
+                <view class="name">{{userName}}</view>
+                 <view class='no'>{{mobileNo}}</view>
+                 <view class='jt'>
+                    <image src="img/bc.png"></image>
+                 </view>
+            </view>
+        </view>
+   </view>
+   <view class='tabInfo'>
+        <view class='jewel'>
+            <view class="myPacketNum">
+                <view class="num">
+                    <text class='jwelAmt'>{{myJewel}}</text>
+                    <image src="img/17-1.png" />
+                </view>			
+            </view>
+            <view class="jwelName">我的萌钻</view>
+            <view class='jwelImg'><image src="img/br.png" /></view>
+		</view>
+
+        <view class="listContent">
+            <view class="bar lg-bg-1">
+                个人资料
+                <view class="tp"><image src="img/br.png" /></view>
+            </view>
+            <view class="bar lg-bg-2">
+                收货地址
+                <view class="tp"><image src="img/br.png" /></view>
+            </view>
+            <view class="bar lg-bg-3">
+                消费订单
+                <view class="tp"><image src="img/br.png" /></view>
+            </view>
+            <view class="bar lg-bg-4">
+                保险订单
+                <view class="tp"><image src="img/br.png" /></view>
+            </view>
+            <view class="bar lg-bg-5" bindtap="videoPlay">
+                视屏播放
+                <view class="tp"><image src="img/br.png" /></view>
+            </view>
+            <view class="bar lg-bg-6" bindtap="luckyDraw">
+                转盘抽奖
+                <view class="tp"><image src="img/br.png" /></view>
+            </view>
+            <view class="bar lg-bg-8" bindtap="switchCity">
+                城市切换
+                <view class="tp"><image src="img/br.png" /></view>
+            </view>
+            <view class="bar lg-bg-7" bindtap="qrcodeBuilder">
+                二维码生成器
+                <view class="tp"><image src="img/br.png" /></view>
+            </view>
+            <view class="bar lg-bg-9" bindtap="scanClick">
+                扫一扫
+                <view class="tp"><image src="img/br.png" /></view>
+            </view>
+            <view class="bar lg-bg-13" bindtap='mapClick'>
+                地图测试
+                <view class="tp"><image src="img/br.png" /></view>
+            </view>
+            <view class="bar lg-bg-10" bindtap='aboutUsClick'>
+                关于我们
+                <view class="tp"><image src="img/br.png" /></view>
+            </view>
+        </view>
+   </view>
+</view>
