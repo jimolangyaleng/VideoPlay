@@ -23,7 +23,7 @@
         "pagePath": "pages/index/index",
         "iconPath": "images/nav/home.png",
         "selectedIconPath": "images/nav/home_slt.png",
-        "text": "发现"
+        "text": "发现的"
       },
       {
         "pagePath": "pages/make/make",
