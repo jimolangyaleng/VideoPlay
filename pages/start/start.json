@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "思成小视屏",
+  "enablePullDownRefresh": false,
+  "disableScroll":true
+}
