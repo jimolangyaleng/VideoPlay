@@ -1,5 +1,0 @@
-<!--pages/richScan/richScan.wxml-->
-<view>
-    <view>下面是扫码成功地址:</view>
-    <view>{{scanUrl}}</view>
-</view>
