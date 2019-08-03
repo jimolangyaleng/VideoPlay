@@ -18,7 +18,6 @@
     "selectedColor": "#e64340",
     "borderStyle": "white",
     "backgroundColor": "#fff",
-    
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -36,7 +35,7 @@
         "pagePath": "pages/mine/mine",
         "iconPath": "images/nav/mine.png",
         "selectedIconPath": "images/nav/mine_slt.png",
-        "text": "我"
+        "text": "我的"
       }
     ]
   },
