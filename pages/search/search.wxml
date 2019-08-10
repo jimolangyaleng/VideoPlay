@@ -1,0 +1,12 @@
+<!--pages/search/search.wxml-->
+<nav-bar navbarData="{{navbarData}}"></nav-bar>
+<view class='container'>
+  <view class='topSearch'>
+    <view class='srLeft'>
+      <image src='/images/search.png' style='width:40rpx;height:40rpx;'></image>
+      <input focus="{{focus}}" bindinput="getSearchVal" value="{{searchValue}}" adjust-position="false" type="text" placeholder-style='color:#888;font-size:28rpx;' placeholder='输入关键字'></input>
+      <image src="/images/del.png" bindtap="clear" class='del' wx:if="{{searchValue.length > 0}}"></image>
+    </view>
+    <view class='searchZi' bindtap='startsearch'>搜索</view>
+  </view>
+</view>

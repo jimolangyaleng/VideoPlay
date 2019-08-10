@@ -4,19 +4,33 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    navbarData:{
+      title:"首页",
+      backType:'2'//1：返回 2：搜索
+    },
+    windowWidth: app.globalData.ktxWindowWidth - 46 * app.globalData.pxToRpxScale,
+    windowHeight: 0,
+    tipsList:[
+      {name:"关注"},
+      { name: "推荐" },
+      { name: "上海" },
+      { name: "开心" },
+      { name: "广场舞" },
+      { name: "祝福" },
+      { name: "健康" },
+      { name: "妙招" },
+      { name: "原创" },
+      { name: "佳作" },
+    ],
+    current:1,
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+  
  
   onLoad: function () {
+    let windowHeight = wx.getSystemInfoSync().windowHeight * app.globalData.pxToRpxScale - (app.globalData.navHeight + app.globalData.ktxStatusHeight) - 46*app.globalData.pxToRpxScale;
+    this.setData({
+      windowHeight: windowHeight
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -51,5 +65,45 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  //标签切换
+  checkTips:function(e){
+    console.log(e.currentTarget.dataset.type)
+    let tip = e.currentTarget.dataset.type;
+    this.setData({
+      current: tip
+    })
+  },
+
+  //滚动
+  upper: function(){
+    console.log("顶部")
+  },
+
+  //滚动
+  lower: function(){
+    console.log("底部")
+  },
+
+  //去搜索页面
+  _goSearch: function(){
+    wx.navigateTo({
+      url: '../search/search',
+    })
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '自定义转发标题',
+      path: '/pages/index/index'
+    }
   }
 })

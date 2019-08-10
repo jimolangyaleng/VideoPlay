@@ -6,6 +6,31 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
+    
+    // 获取手机系统信息
+    wx.getSystemInfo({
+      success: systemInfo => {
+        // px转换到rpx的比例
+        let pxToRpxScale = 750 / systemInfo.windowWidth;
+        // 状态栏的高度
+        let ktxStatusHeight = systemInfo.statusBarHeight * pxToRpxScale
+        // 导航栏的高度
+        let navigationHeight = 44 * pxToRpxScale
+        // window的宽度
+        let ktxWindowWidth = systemInfo.windowWidth * pxToRpxScale
+        // 屏幕的高度
+        let ktxScreentHeight = systemInfo.screenHeight * pxToRpxScale
+        this.globalData.ktxStatusHeight = ktxStatusHeight;
+        this.globalData.navHeight = navigationHeight;
+        this.globalData.ktxWindowWidth = ktxWindowWidth;
+        this.globalData.ktxScreentHeight = ktxScreentHeight;
+        this.globalData.pxToRpxScale = pxToRpxScale;
+
+      }, fail(err) {
+        console.log(err);
+      }
+    }) 
+
     // 登录
     wx.login({
       success: res => {
@@ -34,6 +59,11 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    ktxStatusHeight: 0,
+    navHeight: 0,
+    ktxWindowWidth: 0,
+    ktxScreentHeight: 0,
+    pxToRpxScale: 0
   }
 })

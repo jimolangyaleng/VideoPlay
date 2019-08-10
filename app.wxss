@@ -1,4 +1,8 @@
 /**app.wxss**/
+page{
+  background: #efefef;
+  overflow: hidden;
+}
 .container {
   height: 100%;
   display: flex;
@@ -10,3 +14,5 @@
 .wxParse-img {
   display: block !important;
 }
+
+

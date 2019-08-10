@@ -1,13 +1,171 @@
 <!--index.wxml-->
+<nav-bar navbarData="{{navbarData}}" bind:goSearch="_goSearch"></nav-bar>
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view class='viewTop'>
+      <scroll-view  scroll-x="true" class="viewLeft" style="width:{{windowWidth}}rpx">
+        <view wx:for="{{tipsList}}" wx:key="name" wx:for-index="idx" wx:for-item="item" class="{{current == idx ?'tip slt':'tip'}}" bindtap='checkTips' data-type="{{idx}}">{{item.name}}<view class='line'></view></view>
+       
+      </scroll-view>
+    <view class='viewRight'>
+      <image src='/images/add.png'></image>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class='videoInfo'>
+    <scroll-view scroll-y style="height: {{windowHeight}}rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" enable-back-to-top="true">
+      <view class='items'>
+        <image src="/images/demo_bg.jpg" mode='widthFix' style="width:100%;max-height:400rpx;border-radius:10rpx;" ></image>
+        <view class='bottomInfo'>
+          <view class='btLeft'>
+            <image src='/images/avatar.png'></image>
+            <text>赢火虫</text>
+          </view>
+          <view class='btRight'>
+            <view class='hert'>
+              <image src='/images/hert.png'></image>
+              <text>2万+</text>
+            </view>
+            <view class='hert'>
+              <image src='/images/chat.png'></image>
+              <text>194</text>
+            </view>
+            <view class='share'>
+              <button open-type="share"><image src='/images/wicon.png'></image><text>分享</text></button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='items'>
+        <image src="/images/demo_bg.jpg" mode='widthFix' style="width:100%;max-height:400rpx;border-radius:10rpx;" ></image>
+        <view class='bottomInfo'>
+          <view class='btLeft'>
+            <image src='/images/avatar.png'></image>
+            <text>赢火虫</text>
+          </view>
+          <view class='btRight'>
+            <view class='hert'>
+              <image src='/images/hert.png'></image>
+              <text>2万+</text>
+            </view>
+            <view class='hert'>
+              <image src='/images/chat.png'></image>
+              <text>194</text>
+            </view>
+            <view class='share'>
+              <button open-type="share"><image src='/images/wicon.png'></image><text>分享</text></button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='items'>
+        <image src="/images/demo_bg.jpg" mode='widthFix' style="width:100%;max-height:400rpx;border-radius:10rpx;" ></image>
+        <view class='bottomInfo'>
+          <view class='btLeft'>
+            <image src='/images/avatar.png'></image>
+            <text>赢火虫</text>
+          </view>
+          <view class='btRight'>
+            <view class='hert'>
+              <image src='/images/hert.png'></image>
+              <text>2万+</text>
+            </view>
+            <view class='hert'>
+              <image src='/images/chat.png'></image>
+              <text>194</text>
+            </view>
+            <view class='share'>
+              <button open-type="share"><image src='/images/wicon.png'></image><text>分享</text></button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='items'>
+        <image src="/images/demo_bg.jpg" mode='widthFix' style="width:100%;max-height:400rpx;border-radius:10rpx;" ></image>
+        <view class='bottomInfo'>
+          <view class='btLeft'>
+            <image src='/images/avatar.png'></image>
+            <text>赢火虫</text>
+          </view>
+          <view class='btRight'>
+            <view class='hert'>
+              <image src='/images/hert.png'></image>
+              <text>2万+</text>
+            </view>
+            <view class='hert'>
+              <image src='/images/chat.png'></image>
+              <text>194</text>
+            </view>
+            <view class='share'>
+              <button open-type="share"><image src='/images/wicon.png'></image><text>分享</text></button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='items'>
+        <image src="/images/demo_bg.jpg" mode='widthFix' style="width:100%;max-height:400rpx;border-radius:10rpx;" ></image>
+        <view class='bottomInfo'>
+          <view class='btLeft'>
+            <image src='/images/avatar.png'></image>
+            <text>赢火虫</text>
+          </view>
+          <view class='btRight'>
+            <view class='hert'>
+              <image src='/images/hert.png'></image>
+              <text>2万+</text>
+            </view>
+            <view class='hert'>
+              <image src='/images/chat.png'></image>
+              <text>194</text>
+            </view>
+            <view class='share'>
+              <button open-type="share"><image src='/images/wicon.png'></image><text>分享</text></button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='items'>
+        <image src="/images/demo_bg.jpg" mode='widthFix' style="width:100%;max-height:400rpx;border-radius:10rpx;" ></image>
+        <view class='bottomInfo'>
+          <view class='btLeft'>
+            <image src='/images/avatar.png'></image>
+            <text>赢火虫</text>
+          </view>
+          <view class='btRight'>
+            <view class='hert'>
+              <image src='/images/hert.png'></image>
+              <text>2万+</text>
+            </view>
+            <view class='hert'>
+              <image src='/images/chat.png'></image>
+              <text>194</text>
+            </view>
+            <view class='share'>
+              <button open-type="share"><image src='/images/wicon.png'></image><text>分享</text></button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='items'>
+        <image src="/images/demo_bg.jpg" mode='widthFix' style="width:100%;max-height:400rpx;border-radius:10rpx;" ></image>
+        <view class='bottomInfo'>
+          <view class='btLeft'>
+            <image src='/images/avatar.png'></image>
+            <text>赢火虫</text>
+          </view>
+          <view class='btRight'>
+            <view class='hert'>
+              <image src='/images/hert.png'></image>
+              <text>2万+</text>
+            </view>
+            <view class='hert'>
+              <image src='/images/chat.png'></image>
+              <text>194</text>
+            </view>
+            <view class='share'>
+              <button open-type="share"><image src='/images/wicon.png'></image><text>分享</text></button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
   </view>
 </view>

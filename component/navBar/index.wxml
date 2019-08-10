@@ -1,0 +1,13 @@
+<!--component/navBar/index.wxml-->
+ <view class='nav bg-white' style='height:{{navH}}rpx'>
+    <view class='nav-title'>
+      {{navbarData.title?navbarData.title:"思成小程序"}}
+       <block wx:if="{{navbarData.backType == '1'}}">
+          <image src='/images/back.png' mode='aspectFit' class='back' bindtap='navBack'></image> 
+       </block>
+       <block wx:elif="{{navbarData.backType == '2'}}">
+          <image src='/images/search.png' mode='aspectFit' class='back' bindtap='search'></image> 
+       </block>
+      
+    </view>
+  </view>

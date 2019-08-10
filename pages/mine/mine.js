@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    navbarData: {
+      title: "个人中心",
+      backType: ''//1：返回 2：搜索
+    },
   },
 
   /**

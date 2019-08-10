@@ -1,4 +1,4 @@
-// pages/make/make.js
+// pages/search/search.js
 Page({
 
   /**
@@ -6,9 +6,11 @@ Page({
    */
   data: {
     navbarData: {
-      title: "作品制作",
-      backType: ''//1：返回 2：搜索
+      title: "关键词搜索",
+      backType: '1'//1：返回 2：搜索
     },
+    focus: true,
+    searchValue: "",
   },
 
   /**
@@ -16,6 +18,26 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+
+  //获取输入框值
+  getSearchVal: function(e){
+    var value = e.detail.value;
+    this.setData({
+      searchValue:value
+    })
+  },
+
+  //清空
+  clear: function(){
+    this.setData({
+      searchValue:""
+    })
+  },
+
+  //开始查询
+  startsearch: function(){
+    console.log("开始查询")
   },
 
   /**

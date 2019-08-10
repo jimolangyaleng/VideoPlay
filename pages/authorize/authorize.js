@@ -6,7 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    navbarData: {
+      title: "用户信息授权",
+      backType: '1'//1：返回 2：搜索
+    },
   },
 
   /**

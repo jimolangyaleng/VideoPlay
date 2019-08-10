@@ -1,22 +1,27 @@
 {
   "pages": [
+    
     "pages/start/start",
     "pages/index/index",
     "pages/make/make",
     "pages/mine/mine",
     "pages/authorize/authorize",
+    "pages/search/search",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "思成小视屏",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom",
+    "enablePullDownRefresh": false,
+    "disableScroll": true
   },
   "tabBar": {
     "color": "#6e6d6b",
     "selectedColor": "#e64340",
-    "borderStyle": "white",
+    "borderStyle": "black",
     "backgroundColor": "#fff",
     "list": [
       {

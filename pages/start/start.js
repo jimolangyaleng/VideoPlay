@@ -6,6 +6,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    navbarData: {
+      title: "简介",
+      backType: ''//1：返回 2：搜索
+    },
     userInfo: {},
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
@@ -51,6 +55,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    // 获取手机系统信息
     var that = this;
     setTimeout(function () {
       that.setData({
