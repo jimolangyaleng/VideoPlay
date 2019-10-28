@@ -6,7 +6,9 @@
     "pages/make/make",
     "pages/mine/mine",
     "pages/authorize/authorize",
+    "pages/playvideo/playvideo",
     "pages/search/search",
+   
     "pages/logs/logs"
   ],
   "window": {
