@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nav-bar": "/component/navBar/index"
+  },
+  "enablePullDownRefresh": false,
+  "navigationBarTextStyle": "white"
+}

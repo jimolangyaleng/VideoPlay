@@ -93,6 +93,13 @@ Page({
     })
   },
 
+  //开始播放视屏
+  goPlayVideo: function(){
+    wx.navigateTo({
+      url: '../playvideo/playvideo',
+    })
+  },
+
   /**
    * 用户点击右上角分享
    */

@@ -1,0 +1,114 @@
+<!--pages/playvideo/playvideo.wxml-->
+<nav-bar navbarData="{{navbarData}}" bind:goSearch="_goSearch"></nav-bar>
+<view class="container" style="z-index:{{zindex}}">
+  <scroll-view class="section" scroll-y bindscroll="scroll" style="height:{{windowHeight}}rpx">
+    <view style="height:{{opcityHeight}}rpx;visibility: hidden;"></view>
+    <video id="myVideo" show-mute-btn="true" bindfullscreenchange="bindfullscreenchange" src="{{videosrc}}" controls autoplay='{{true}}' direction="{{0}}" show-progress="true" show-center-play-btn="true" object-fit="contain" style="height:{{videoHeight}}rpx;width:{{windowWidth}}rpx"></video>
+    <view class="videInfo">
+      <view style="background:#fff;padding:30rpx">
+        <view class="person">
+          <view class="avatar">
+            <image src='/images/avatar.png'></image>
+            <view class="tip">
+              <text>赢火虫</text>
+              <text class="date">15天前</text>
+            </view>
+          </view>
+          <view class="more">
+            更多
+          </view>
+        </view>
+        <view class="tsw">大家晚上好!</view>
+        <view class="sj">
+          <view class="items">
+            <view class="laber">
+              <image src='/images/video/play.png'></image>
+              <text>100000+</text>
+            </view>
+            <view class="laber">
+              <image src='/images/video/shoucang.png'></image>
+              <text>2569</text>
+            </view>
+            <view class="laber">
+              <image src='/images/video/liuyan.png'></image>
+              <text>28</text>
+            </view>
+            <view class="laber">
+              <image src='/images/video/zhuanfa.png'></image>
+              <text>100000+</text>
+            </view>
+
+          </view>
+          <view class="pinglun">
+            <view class="its">
+              <view class="name">从今、以后：</view>
+              <view class="nr">这是我的测试评论</view>
+            </view>
+             <view class="its oth">
+              <view class="name">从今、以后：</view>
+              <view class="nr">这是我的测试评论</view>
+            </view>
+            <view class="more">
+              全部28条评论
+            </view>
+          </view>
+
+        </view>
+      </view>
+      <view class="moreVideo">
+        <view class="tips">
+          <view class="line"></view>
+          <view class="tip">更多推荐欣赏</view>
+          <view class="line"></view>
+        </view>
+        <view class="imageList">
+          <view class="imgs">
+            <image src="/images/demo_bg.jpg"></image>
+          </view>
+           <view class="imgs">
+            <image src="/images/demo_bg.jpg"></image>
+          </view>
+           <view class="imgs">
+            <image src="/images/demo_bg.jpg"></image>
+          </view>
+           <view class="imgs">
+            <image src="/images/demo_bg.jpg"></image>
+          </view>
+           <view class="imgs">
+            <image src="/images/demo_bg.jpg"></image>
+          </view>
+           <view class="imgs">
+            <image src="/images/demo_bg.jpg"></image>
+          </view>
+           <view class="imgs">
+            <image src="/images/demo_bg.jpg"></image>
+          </view>
+           <view class="imgs">
+            <image src="/images/demo_bg.jpg"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="videobtom {{slideUp?'slideUp':''}}" style='background:{{bg}}'>
+    <view class="point">
+      <label></label>
+      <label></label>
+      <label></label>
+    </view>
+    <view class="zan" bindtap="zan">
+      <image src='/images/video/{{isZan?"zan_slt.png":"zan.png"}}' animation="{{shareAni}}"></image>
+      <text>点赞</text>
+    </view>
+    <view class="pinglun zan">
+      <image src="/images/video/ping.png"></image>
+      <text>评论</text>
+    </view>
+    <view class='share'>
+      <button open-type="share" animation="{{shareAni}}">
+        <image src='/images/wicon.png'></image>
+        <text>分享</text>
+      </button>
+    </view>
+  </view>
+</view>

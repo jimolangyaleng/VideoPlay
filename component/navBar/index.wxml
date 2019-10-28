@@ -1,9 +1,9 @@
 <!--component/navBar/index.wxml-->
- <view class='nav bg-white' style='height:{{navH}}rpx'>
+ <view class='nav bg-white {{navbarData.bg?"whitezi":""}}' style='height:{{navH}}rpx;background:{{navbarData.bg?navbarData.bg:""}}'>
     <view class='nav-title'>
       {{navbarData.title?navbarData.title:"思成小程序"}}
        <block wx:if="{{navbarData.backType == '1'}}">
-          <image src='/images/back.png' mode='aspectFit' class='back' bindtap='navBack'></image> 
+          <image src='/images/{{navbarData.bg?"whitebk.png":"back.png"}}' mode='aspectFit' class='back' bindtap='navBack'></image> 
        </block>
        <block wx:elif="{{navbarData.backType == '2'}}">
           <image src='/images/search.png' mode='aspectFit' class='back' bindtap='search'></image> 
