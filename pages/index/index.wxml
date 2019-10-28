@@ -12,7 +12,7 @@
   </view>
   <view class='videoInfo'>
     <scroll-view scroll-y style="height: {{windowHeight}}rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" enable-back-to-top="true">
-      <view class='items' bindtap="goPlayVideo">
+      <view class='items'>
         <image src="/images/demo_bg.jpg" mode='widthFix' style="width:100%;max-height:400rpx;border-radius:10rpx;" ></image>
         <view class='bottomInfo'>
           <view class='btLeft'>

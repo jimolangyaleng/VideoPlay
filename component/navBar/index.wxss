@@ -7,7 +7,6 @@
   left: 0;
   z-index: 10;
 }
-
 .nav-title{
   width: 100%;
   height: 90rpx;
@@ -20,9 +19,6 @@
   font-family:PingFang-SC-Medium;
   font-size:36rpx;
   letter-spacing:4rpx;
-}
-.whitezi{
-  color: #fff;
 }
 .nav .back{
   width: 40rpx;
