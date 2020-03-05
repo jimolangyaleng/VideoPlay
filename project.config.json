@@ -21,7 +21,7 @@
 		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.0",
+	"libVersion": "2.10.2",
 	"appid": "wx4662c2099be12c82",
 	"projectname": "VideoPlay",
 	"debugOptions": {
